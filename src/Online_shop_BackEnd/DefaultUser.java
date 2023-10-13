@@ -2,9 +2,8 @@ package Online_shop_BackEnd;
 
 public class DefaultUser implements User {
 
+	private static int userCounter = 0;
 
-private static int userCounter = 0;
-	
 	private int id;
 	private String firstName;
 	private String lastName;
@@ -14,9 +13,10 @@ private static int userCounter = 0;
 	{
 		id = ++userCounter;
 	}
+
 	public DefaultUser() {
 	}
-	
+
 	public DefaultUser(String firstName, String lastName, String password, String email) {
 		this.firstName = firstName;
 		this.lastName = lastName;
@@ -64,7 +64,7 @@ private static int userCounter = 0;
 	public int getId() {
 		return this.id;
 	}
-	
+
 	void clearState() {
 		userCounter = 0;
 	}
